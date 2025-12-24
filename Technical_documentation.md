@@ -15,12 +15,11 @@ Key Challenges Identified:
   - Predictable behavior
 - Real-world workflows require multi-agent coordination
 
-
 Hence, the solution focuses on:
 
--Automated OpenAPI → MCP translation
--Agent-to-Agent (A2A) workflows
--Graceful handling of ambiguity and partial failures
+- Automated OpenAPI → MCP translation
+- Agent-to-Agent (A2A) workflows
+- Graceful handling of ambiguity and partial failures
 
 ---
 ### 2.System Architecture Overview
@@ -68,5 +67,6 @@ Lightweight web chat UI
 Used only for demonstration
 
 Not a core evaluation component
+
 
 
