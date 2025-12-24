@@ -1,4 +1,4 @@
-# 🍕 Pizza AI Agent System
+#  Pizza AI Agent System
 
 **An AI-powered pizza ordering system with multi-agent orchestration using MCP (Model Context Protocol)**
 
@@ -18,7 +18,7 @@
 
 ---
 
-## 🎯 Overview
+##  Overview
 
 This system demonstrates automated transformation of OpenAPI specifications into MCP servers, enabling AI agents to interact with pizza ordering services. Two cooperating agents handle order placement and delivery scheduling through Agent-to-Agent (A2A) communication.
 
@@ -31,7 +31,7 @@ This system demonstrates automated transformation of OpenAPI specifications into
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 ┌─────────────────┐
@@ -84,7 +84,7 @@ This system demonstrates automated transformation of OpenAPI specifications into
 
 ---
 
-## 🚀 Setup Instructions
+##  Setup Instructions
 
 ### Prerequisites
 
@@ -145,7 +145,7 @@ http://localhost:9000
 
 ---
 
-## 📖 Usage
+##  Usage
 
 ### Basic Order Flow
 
@@ -163,33 +163,33 @@ http://localhost:9000
 ### Example Conversation
 
 ```
-Bot: Hi! 👋 What is your name?
-You: John
+Bot: Hi! What is your name?
+You: Rakshaa
 
-Bot: Nice to meet you, John! 📍 Where are you located?
+Bot: Nice to meet you, Rakshaa! 📍 Where are you located?
 You: Mumbai
 
-Bot: Great! 👍 You can now order pizza...
+Bot: Great! You can now order pizza...
 You: menu
 
-Bot: 🍕 Available Pizzas:
+Bot: Available Pizzas:
      • Margherita (Small, Medium, Large)
      • Farmhouse (Medium, Large)
      ...
 
 You: farmhouse medium
-Bot: 🛒 Added "farmhouse medium" to your order.
+Bot: Added "farmhouse medium" to your order.
 
 You: pepperoni small x2
-Bot: 🛒 Added "pepperoni small" (2 items) to your order.
+Bot: Added "pepperoni small" (2 items) to your order.
 
 You: checkout
-Bot: 🍕 Hi John! Your order is confirmed...
+Bot: 🍕 Hi Rakshaa! Your order is confirmed...
 ```
 
 ---
 
-## 📡 API Documentation
+##  API Documentation
 
 ### MCP Server Endpoints
 
@@ -257,7 +257,7 @@ Places order through agent system.
 
 ---
 
-## 🤝 Agent Communication Flow
+##  Agent Communication Flow
 
 ### A2A Protocol Message Structure
 
@@ -282,7 +282,7 @@ Places order through agent system.
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 PIZZA/
@@ -312,7 +312,7 @@ PIZZA/
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 - **FastAPI** - High-performance web framework
 - **Uvicorn** - ASGI server
@@ -324,7 +324,7 @@ PIZZA/
 
 ---
 
-## 🔮 Future Enhancements
+##  Future Enhancements
 
 - [ ] Add authentication & authorization
 - [ ] Implement persistent database (PostgreSQL/MongoDB)
@@ -337,7 +337,7 @@ PIZZA/
 
 ---
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Issue: Ports already in use
 ```bash
@@ -363,22 +363,15 @@ pip install -r requirements.txt
 
 ---
 
-## 📝 License
+##  License
 
-[Add your license here]
-
----
-
-## 👥 Contributors
-
-[Add contributors here]
+This project is licensed under the MIT License.
 
 ---
 
-## 📧 Contact
 
-For questions or issues, please [open an issue](link-to-issues) or contact [your-email].
+##  Contact
+
+For questions or issues, please contact [rakshaa9302@gmail.com].
 
 ---
-
-**Made with ❤️ and 🍕**
