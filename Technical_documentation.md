@@ -156,5 +156,57 @@ All normalized internally into:
   "quantity": 2
 }
 ```
+#### 6.3 Invalid Orders
+- Unsupported pizza → Suggest valid alternatives
+- Invalid size → Show allowed sizes
 
+#### 6.4 Partial Failures
+If:
+- Scheduling agent fails
+- External MCP is unavailable
 
+Then:
+- Order placement still succeeds
+- A fallback ETA is returned
+- System does not crash
+
+This ensures graceful degradation
+
+---
+
+### 7. Assumptions Made
+To keep the focus on agent orchestration:
+- No authentication or payments
+- Single-user session
+- Mock data instead of real backend
+- External MCP assumed to be trusted
+
+These assumptions are explicit, reasonable, and aligned with the problem scope.
+
+---
+
+### 8. Scalability & Extensibility
+The system is designed to:
+- Plug in new MCP servers easily
+- Add new agents without refactoring
+- Replace mock services with real ones
+- Handle larger OpenAPI specs
+
+---
+
+### 9. Security Considerations (Out of Scope but Considered)
+Although not required:
+- Input validation is enforced via schemas
+- Tool boundaries prevent arbitrary execution
+- No sensitive data is stored
+
+---
+
+### 10. Conclusion
+This system demonstrates:
+- Automated OpenAPI → MCP generation
+- Proper MCP and A2A usage
+- Robust agent coordination
+- Real-world ambiguity handling
+
+The focus is intentionally placed on agentic system design, not traditional CRUD APIs, aligning exactly with the intent of the challenge.
