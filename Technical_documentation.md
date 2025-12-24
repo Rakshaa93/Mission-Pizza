@@ -1,8 +1,6 @@
 # Technical Documentation  
 ## Pizza AI Agent System
 
----
-
 ### 1.Problem Understanding
 The core problem is not pizza ordering, but making traditional APIs usable by AI agents.
 
@@ -57,6 +55,53 @@ Mocked backend data is used intentionally, as allowed by the problem statement
 - Used only for demonstration
 - Not a core evaluation component
 
+---
 
+### 3.OpenAPI → MCP Transformation Logic
 
+#### 3.1 Why Automation Was Necessary
+Manual MCP tool creation:
+- Is error-prone
+- Breaks when APIs change
+- Does not scale for large systems
 
+#### 3.2 Transformation Strategy
+For each OpenAPI endpoint:
+- Endpoint → MCP Tool
+- HTTP method → Tool action
+- Request schema → MCP input schema
+- Response schema → MCP output schema
+- Description → Tool metadata
+
+This ensures:
+- Full protocol fidelity
+- Agent discoverability
+- Zero manual MCP coding
+
+#### 3.3 Design Decision
+FastAPI was chosen because:
+- It natively supports OpenAPI
+- Async by default
+- Simple introspection for automation
+
+---
+
+### 4. Agent Design Rationale
+
+#### 4.1 Why Multiple Agents?
+A multi-agent design was chosen to:
+- Enforce separation of concerns
+- Enable independent scaling
+- Allow future agents (payment, notification)
+
+#### 4.2 Ordering Agent Responsibilities
+- Natural language parsing
+- Order normalization
+- MCP interaction
+- Error handling
+- A2A message dispatch
+
+#### 4.3 Scheduling Agent Responsibilities
+- External MCP interaction
+- Delivery time coordination
+- Fallback logic when scheduling fails
