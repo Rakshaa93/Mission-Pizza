@@ -105,3 +105,50 @@ A multi-agent design was chosen to:
 - External MCP interaction
 - Delivery time coordination
 - Fallback logic when scheduling fails
+
+### 5. Agent-to-Agent (A2A) Communication
+
+#### 5.1 Why A2A?
+Direct coupling between agents:
+- Reduces flexibility
+- Increases failure impact
+
+A2A enables:
+- Loose coupling
+- Message-based coordination
+- Easier extension
+
+#### 5.2 Message Structure
+A structured payload is used to ensure:
+- Predictable parsing
+- Minimal shared state
+- Clear responsibility boundaries
+
+---
+
+### 6. Handling Ambiguities (Key Evaluation Area)
+The assignment intentionally leaves details vague. The following strategies were implemented:
+
+#### 6.1 Ambiguous User Input
+- Incremental clarification
+- No irreversible action without confirmation
+
+**Example**:
+
+User: “add one more”
+System asks: “Which pizza would you like to add?”
+
+#### 7.2 Quantity Normalization
+Supported formats:
+- x2
+- *2
+- 2 margherita
+- margherita x 2
+
+All normalized internally into:
+
+{
+  "pizza": "Margherita",
+  "size": "Medium",
+  "quantity": 2
+}
