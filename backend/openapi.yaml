@@ -1,0 +1,43 @@
+openapi: 3.0.0
+info:
+  title: Pizza API
+  version: 1.0.0
+
+paths:
+  /menu:
+    get:
+      summary: Get pizza menu
+      responses:
+        "200":
+          description: Menu list
+
+  /order:
+    post:
+      summary: Place an order
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                pizza:
+                  type: string
+                size:
+                  type: string
+      responses:
+        "200":
+          description: Order placed
+
+  /order/{order_id}:
+    get:
+      summary: Track order
+      parameters:
+        - in: path
+          name: order_id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Order status
