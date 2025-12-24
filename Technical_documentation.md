@@ -106,6 +106,8 @@ A multi-agent design was chosen to:
 - Delivery time coordination
 - Fallback logic when scheduling fails
 
+---
+
 ### 5. Agent-to-Agent (A2A) Communication
 
 #### 5.1 Why A2A?
@@ -138,7 +140,7 @@ The assignment intentionally leaves details vague. The following strategies were
 User: “add one more”
 System asks: “Which pizza would you like to add?”
 
-#### 7.2 Quantity Normalization
+#### 6.2 Quantity Normalization
 Supported formats:
 - x2
 - *2
@@ -147,8 +149,12 @@ Supported formats:
 
 All normalized internally into:
 
+```json
 {
   "pizza": "Margherita",
   "size": "Medium",
   "quantity": 2
 }
+```
+
+
