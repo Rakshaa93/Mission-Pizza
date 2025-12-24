@@ -6,7 +6,8 @@
 
 ## 📋 Table of Contents
 
-- [Overview](#Overview)
+- [Overview](#overview)
+- [Architectural Decisions & Design Considerations](#architectural-decisions--design-considerations)
 - [Architecture](#architecture)
 - [Features](#features)
 - [Setup Instructions](#setup-instructions)
@@ -15,6 +16,8 @@
 - [Agent Communication Flow](#agent-communication-flow)
 - [Project Structure](#project-structure)
 - [Technologies Used](#technologies-used)
+- [Future Enhancements](#future-enhancements)
+- [Troubleshooting](#troubleshooting)
 
 ---
 
@@ -28,6 +31,33 @@ This system demonstrates automated transformation of OpenAPI specifications into
 2. **Ordering Agent** - Handles pizza orders via natural language
 3. **Scheduling Agent** - Coordinates delivery timing via external calendar MCP
 4. **Web UI** - User-friendly chat interface for placing orders
+
+---
+## 🧠 Architectural Decisions & Design Considerations
+
+### Architectural Choices
+
+- **MCP (Model Context Protocol)** is used instead of direct REST calls to provide a standardized, tool-based interface for AI agents.
+- A **multi-agent architecture** was chosen to enforce separation of concerns between order management and delivery scheduling.
+- **Agent-to-Agent (A2A) communication** enables loose coupling and allows new agents (e.g., payment, notification) to be added easily.
+- **FastAPI** was selected for its async support, performance, and native OpenAPI compatibility.
+- A **mock external Calendar MCP** is used to simulate real-world third-party integrations without relying on external services.
+
+### Design Assumptions
+
+- The pizza menu is static and served via a mock MCP server.
+- The system assumes a single-user interaction flow (no authentication or session handling).
+- Users provide input in natural language but within a limited pizza-ordering domain.
+- External MCP services are assumed to be available and trusted.
+- Persistent storage (database) is intentionally omitted to keep the focus on agent orchestration.
+
+### Handling Ambiguities
+
+- User input is parsed incrementally; missing details such as size or quantity trigger clarification prompts.
+- Quantity indicators like `x2`, `*2`, or numeric suffixes are normalized before order placement.
+- Invalid pizza names or unsupported sizes are handled with user-friendly error messages.
+- If delivery scheduling fails, the system falls back to a default estimated delivery time.
+- Partial failures between agents are handled gracefully without crashing the system.
 
 ---
 
@@ -94,28 +124,12 @@ This system demonstrates automated transformation of OpenAPI specifications into
 
 ### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd PIZZA
-   ```
+git clone <repository-url>
+cd PIZZA
+python -m venv venv
+venv\Scripts\activate   # Windows
+pip install -r requirements.txt
 
-2. **Create virtual environment**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-3. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Configure environment (optional)**
-   ```bash
-   cp .env.example .env
-   # Edit .env with your settings
-   ```
 
 ### Running the System
 
@@ -375,3 +389,4 @@ This project is licensed under the MIT License.
 For questions or issues, please contact [rakshaa9302@gmail.com].
 
 ---
+
