@@ -7,14 +7,14 @@
 The core problem is not pizza ordering, but making traditional APIs usable by AI agents.
 
 Key Challenges Identified:
+- REST APIs are not agent-friendly
+- Manual MCP creation does not scale
+- AI agents require:
+  - Structured tools
+  - Clear schemas
+  - Predictable behavior
+- Real-world workflows require multi-agent coordination
 
--REST APIs are not agent-friendly
--Manual MCP creation does not scale
--AI agents require:
-   *Structured tools
-   *Clear schemas
-   *Predictable behavior
--Real-world workflows require multi-agent coordination
 
 Hence, the solution focuses on:
 
@@ -68,4 +68,5 @@ Lightweight web chat UI
 Used only for demonstration
 
 Not a core evaluation component
+
 
