@@ -4,7 +4,7 @@
 
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [Overview](#overview)
 - [Architectural Decisions & Design Considerations](#architectural-decisions--design-considerations)
@@ -33,7 +33,7 @@ This system demonstrates automated transformation of OpenAPI specifications into
 4. **Web UI** - User-friendly chat interface for placing orders
 
 ---
-## 🧠 Architectural Decisions & Design Considerations
+##  Architectural Decisions & Design Considerations
 
 ### Architectural Choices
 
@@ -102,15 +102,15 @@ This system demonstrates automated transformation of OpenAPI specifications into
 
 ---
 
-## ✨ Features
+##  Features
 
-- ✅ Automatic OpenAPI → MCP conversion
-- ✅ Multi-pizza ordering support
-- ✅ Natural language processing
-- ✅ Agent-to-Agent communication protocol
-- ✅ Real-time order tracking
-- ✅ Delivery scheduling integration
-- ✅ Beautiful chat UI
+-  Automatic OpenAPI → MCP conversion
+-  Multi-pizza ordering support
+-  Natural language processing
+-  Agent-to-Agent communication protocol
+-  Real-time order tracking
+-  Delivery scheduling integration
+-  Beautiful chat UI
 
 ---
 
@@ -180,7 +180,7 @@ http://localhost:9000
 Bot: Hi! What is your name?
 You: Rakshaa
 
-Bot: Nice to meet you, Rakshaa! 📍 Where are you located?
+Bot: Nice to meet you, Rakshaa!  Where are you located?
 You: Mumbai
 
 Bot: Great! You can now order pizza...
@@ -198,7 +198,7 @@ You: pepperoni small x2
 Bot: Added "pepperoni small" (2 items) to your order.
 
 You: checkout
-Bot: 🍕 Hi Rakshaa! Your order is confirmed...
+Bot:  Hi Rakshaa! Your order is confirmed...
 ```
 
 ---
@@ -389,5 +389,6 @@ This project is licensed under the MIT License.
 For questions or issues, please contact [rakshaa9302@gmail.com].
 
 ---
+
 
 
